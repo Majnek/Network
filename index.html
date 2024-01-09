@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAJNEK NETWORK</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: transparent;
+        }
+
+        img {
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Majnek Network</h1>
+    <button id="youtubeBtn" onclick="redirectToYouTube()">
+        <img src="youtube_logo.png" alt="YouTube">
+    </button>
+    <button id="batthyToolBtn" onclick="redirectToBatthyTool()">
+        <img src="download.png" alt="Batthy Tool">
+    </button>
+    <button id="twitterBtn" onclick="redirectToTwitter()">
+        <img src="x_logo.png" alt="Twitter">
+    </button>
+
+    <script>
+        function redirectToYouTube() {
+            window.location.href = "https://www.youtube.com";
+        }
+
+        function redirectToBatthyTool() {
+            window.location.href = "https://www.example.com/batthy-tool";
+        }
+
+        function redirectToTwitter() {
+            window.location.href = "https://twitter.com";
+        }
+    </script>
+</body>
+</html>
+
