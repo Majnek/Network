@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAJNEK NETWORK</title>
+    <title>Network - v.1.2</title>
     <style>
         body {
             background-color: black;
             color: green;
-            font-family: Arial, sans-serif;
+            font-family: 'Press Start 2P', cursive;
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,6 +16,33 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .gif-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50%; /* Adjust the size as needed */
+            max-width: 200px; /* Set a maximum width */
+            z-index: 0;
+            pointer-events: none;
         }
 
         button {
@@ -23,10 +50,12 @@
             border: none;
             cursor: pointer;
             margin: 10px;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1;
         }
 
         button:hover {
-            background-color: transparent;
+            transform: scale(1.1);
         }
 
         img {
@@ -34,16 +63,18 @@
             height: auto;
         }
     </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
 </head>
 <body>
+    <div class="gif-overlay" style="background: url('text.gif') center center no-repeat; background-size: cover;"></div>
     <h1>Majnek Network</h1>
-    <button id="youtubeBtn" onclick="redirectToYouTube()">
+    <button id="youtubeBtn" onclick="redirectToYouTube()" title="YouTube">
         <img src="youtube_logo.png" alt="YouTube">
     </button>
-    <button id="batthyToolBtn" onclick="redirectToBatthyTool()">
-        <img src="download.png" alt="Batthy Tool">
+    <button id="batthyToolBtn" onclick="redirectToBatthyTool()" title="Pobierz Batthy Tool">
+        <img src="down.png" alt="Batthy Tool">
     </button>
-    <button id="twitterBtn" onclick="redirectToTwitter()">
+    <button id="twitterBtn" onclick="redirectToTwitter()" title="My Twitter">
         <img src="x_logo.png" alt="Twitter">
     </button>
 
@@ -62,4 +93,3 @@
     </script>
 </body>
 </html>
-
